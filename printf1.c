@@ -39,6 +39,18 @@ int format_type(const char *format, int i, int count, va_list valist)
 	  _putchar(p);
 	  count++;
 	}
+	if (format [i + 1] == 'd' || format[i + 1] == 'i')
+	{
+	  int d;
+	  d = va_arg(valist, int);
+	  if (!d)
+	    {
+	      count++;
+	      putchar(48);
+	    }
+	  else
+	    count = count + print_numbers(d);
+    }
 }
 
 /**
