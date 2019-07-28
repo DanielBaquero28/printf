@@ -21,6 +21,10 @@ int format_type(const char *format, int i, int count, va_list valist)
   if (format[i + 1] == 's')
     {
       s = va_arg(valist, char *);
+      if (s == NULL)
+	{
+	s = "(null)";
+	}
       while (*s != '\0')
 	{
 	  _putchar(s[i]);
