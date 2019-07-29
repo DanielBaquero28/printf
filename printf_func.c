@@ -10,13 +10,26 @@ int _printf(const char *format, ...)
 {
 	va_list valist;
 	int x;
+	int y;
 
 	va_start(valist, format);
 
 	for (x = 0; format[x] != '\0'; x++)
-		if (format[x] == "%")
+	{
+		for (y = 0;  y < 4 ; y++)
 		{
-			_funcion_nombre(x, format);
+			if (format[y] == '%')
+			{
+				if (format[0 + 1] == *[ops[y].c))
+				{
+					ops[y].f(valist);
+					y = 4;
+				}
+			}
+			y = y + 1;
 		}
+	y = 0;
+	}
+	_puts("\n");
 	va_end(valist);
 }
