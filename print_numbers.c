@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_decimals - Prints the numbers in decimals format. 
+ * print_decimals - Prints the numbers in decimals format.
  * @valist: List of decimals.
  * Return: Number of decimals.
 **/
@@ -14,7 +14,7 @@ int count = 0;
 if (n < 0)
 {
 n = (n * -1);
-count = count + _putchar('-'); 
+count = count + _putchar('-');
 }
 i = n;
 while (i > 0)
@@ -28,7 +28,7 @@ while (j > 0)
 count = count + _putchar(((n / j) % 10) + 48);
 j /= 10;
 }
-return(count);
+return (count);
 }
 
 /**
