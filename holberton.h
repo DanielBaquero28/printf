@@ -4,14 +4,16 @@
 #include <stdlib.h>
 #include <stdarg.h>
 /**
- * struct st 
- *
+ * struct st - Function that prints the structure.
+ * @s: pointer that points to a string
+ * @f: pointer that point to a structure
 **/
 
-typedef struct st{
-  char *s;
-  int (*f)(va_list);
-}op_t;
+typedef struct st
+{
+	char *s;
+	int (*f)(va_list);
+} op_t;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
