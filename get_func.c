@@ -6,7 +6,7 @@
  **/
 int (*get_func(char s))(va_list)
 {
-	op_ ops[] = {
+	op_t ops[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"d", print_decimal},
