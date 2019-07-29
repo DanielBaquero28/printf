@@ -20,8 +20,8 @@ int _printf(const char *format, ...)
 		{
 			if (format[y] == '%')
 			{
-				if (format[0 + 1] == *[ops[y].c))
-				{
+				if (format[0 + 1] == *(ops[y].c))
+{
 					ops[y].f(valist);
 					y = 4;
 				}
