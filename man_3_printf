@@ -11,13 +11,13 @@ This function prints a a standard output series of ARGUMENTS to
 .I stdout
 with the following return.
 .SH Returns:
-If succesfull the number of characters printed (excluding the null byte used to enfunction will return the d output to strings).
+If successfull will return the number of characters printed (excluding the null byte used to end the output to strings).
 .SH Conversion specifiers:
 Conversion specifiers that are going to be handled are as follows.
 .TP
 .B c
 The argument is used to print a character.
-.I (char).
+.I (char)
 .TP
 .B s
 This argument is a
@@ -25,19 +25,14 @@ This argument is a
 that points to an array of characters. It has to be remembered that an array ends in a NULL character that indicates the end of the string.
 .TP
 .B i
-
+This argument is an integer of base 10 and if received it wil print as an integer.
 .TP
 .B d
+This argument is in decimal format and if received it will be identified and printed a decimal.
+.TP
+.B %
+It is an argument that will not be converted if received it will print '%'.
 
-
-
-
-
-.SH OPTIONS
-
-does not take any options. However, you can supply studentname.
-.SH SEE ALSO
-For further information about how the function works you can refer to the printf man in your terminal.
 .SH BUGS
 No known bugs.
 .SH AUTHOR
