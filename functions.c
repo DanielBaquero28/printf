@@ -1,12 +1,12 @@
 #include "holberton.h"
 /**
- * @format_type: Identifies if format is corrected.
- * @format: It is a character string, defines type of data.
+ * @format_type: Identifies if format is corrected. 
+ * @format: It is a character string, defines type of data. 
  * @i: Index
  * @count: Number of characters printed.
  * @valist: Hold the information needed to retrieve the additional arguments.
  * Return: Count variable
-**/
+ **/
 
 int format_type(const char *format, int i, int count, va_list valist)
 {
@@ -39,7 +39,7 @@ int format_type(const char *format, int i, int count, va_list valist)
 		_putchar(p);
 		count++;
 	}
-	if (format[i + 1] == 'd' || format[i + 1] == 'i')
+	if (format [i + 1] == 'd' || format[i + 1] == 'i')
 	{
 		int d;
 		d = va_arg(valist, int);
@@ -51,15 +51,4 @@ int format_type(const char *format, int i, int count, va_list valist)
 		else
 			count = count + print_numbers(d);
 	}
-}
-
-/**
- * _printf - Produces output according to a format.
- * @format: It is a character string, defines type of data.
- * Return: The number of characters printed.
-**/
-
-int _printf(const char *format, ...)
-{
-
 }
