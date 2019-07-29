@@ -8,9 +8,10 @@
 
 int print_char(va_list valist)
 {
-  int c;
-  c = va_arg(valist, int);
-  return(_putchar(c));
+	int c;
+
+	c = va_arg(valist, int);
+	return (_putchar(c));
 }
 
 /**
@@ -21,15 +22,15 @@ int print_char(va_list valist)
 
 int print_string(va_list valist)
 {
-  int i, count = 0;
-  char *s;
+	int i, count = 0;
+	char *s;
 
-  s = va_arg(valist, char *);
-  if (s == NULL)
-    s = "(null)";
-  for(i = 0; s[i]; i++)
-    {
-    count = count + _putchar(s[i]);
-    }
-  return (count);
+	s = va_arg(valist, char *);
+	if (s == NULL)
+		s = "(null)";
+	for (i = 0; s[i]; i++)
+	{
+		count = count + _putchar(s[i]);
+	}
+	return (count);
 }
