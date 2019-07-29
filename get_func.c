@@ -9,15 +9,15 @@ int (*get_func(char s))(va_list)
 	op_t ops[] = {
 		{"c", print_char},
 		{"s", print_string},
-		{"d", print_decimal},
+		{"d", print_decimals},
 		{"i", print_int},
 		{NULL, NULL}
 	};
 	int i;
 
-	for (i = 0; ops[i].c != NULL; i++)
+	for (i = 0; ops[i].s != NULL; i++)
 	{
-		if (*ops[i].c == s)
+		if (ops[i].s[0] == s)
 			return (ops[i].f);
 	}
 	return (NULL);

@@ -11,6 +11,7 @@ int print_decimals(va_list valist)
 int n, i, j = 1;
 int count = 0;
 
+n = va_arg(valist, int);
 if (n < 0)
 {
 n = (n * -1);

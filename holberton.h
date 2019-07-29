@@ -18,7 +18,7 @@ int _printf(const char *format, ...);
 int print_numbers(int i);
 int print_char(va_list valist);
 int print_string(va_list valist);
-int print_decimal(va_list valist);
+int print_decimals(va_list valist);
 int print_int(va_list valist);
 int (*get_func(char s))(va_list valist);
 #endif

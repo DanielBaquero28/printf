@@ -2,34 +2,25 @@
 /**
  * _printf - Produces poutput according to a format.
  * @format: It´s a character string, defines type of data.
- * Return: Number of charaters printed
- *
- */
+ * Return: 0
+**/
 
 int _printf(const char *format, ...)
 {
 	va_list valist;
 	int x;
-	int y;
 
 	va_start(valist, format);
 
 	for (x = 0; format[x] != '\0'; x++)
 	{
-		for (y = 0;  y < 4 ; y++)
-		{
-			if (format[y] == '%')
-			{
-				if (format[0 + 1] == *[ops[y].c))
-				{
-					ops[y].f(valist);
-					y = 4;
-				}
-			}
-			y = y + 1;
-		}
-	y = 0;
+			if (format[x] == '%')
+			  {
+			    get_func(format[x + 1])(valist);
+			    x += 2;
+			  }
+		_putchar(format[x]);
 	}
-	_puts("\n");
 	va_end(valist);
+	return (0);
 }
