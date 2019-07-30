@@ -15,6 +15,11 @@ if (n < 0)
 n = (n * -1);
 count = count + _putchar('-');
 }
+if (n == 0)
+{
+_putchar(48);
+return(1);
+}
 i = n;
 while (i > 0)
 {
