@@ -12,7 +12,7 @@ if (format != NULL)
 {
 int x;
 va_list valist;
-int (*o)(valist);
+int (*o)(va_list);
 va_start(valist, format);
 
 if (format[0] == '%' && format[1] == '\0')
@@ -30,7 +30,7 @@ x++;
 else if (format[x + 1] != '\0')
 {
 o = get_func(format[x + 1]);
-count += (o ? o(valist) : _putchar(format[i]) + _putchar(format[i + 1]));
+count += (o ? o(valist) : _putchar(format[x]) + _putchar(format[x + 1]));
 x++;
 }
 }
