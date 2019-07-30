@@ -1,8 +1,8 @@
-#Project: Printf Test
+#Project: Printf Test#
 **In this project we will create our own printf function (Test)**
 
 
-##Mandatory Tasks
+##Mandatory Tasks##
 * Task 0: Write a function that produces output with conversion specifiers c, s and %.
 * Task 1: Handle the following conversion specifiers: %d and %i.
 * Task 2: Create a man page for your function.
@@ -24,7 +24,7 @@
 
 **print_func.c:** Contains the function _printf this function will print a set of characters to stdout according to the directives set by Holberton for this task.
 
-##Authors
+##Authors##
 
 Daniel Baquero
 
