@@ -2,12 +2,12 @@
 **In this project we will create our own printf function (Test)**
 
 
-##Mandatory Tasks##
+## Mandatory Tasks
 * Task 0: Write a function that produces output with conversion specifiers c, s and %.
 * Task 1: Handle the following conversion specifiers: %d and %i.
 * Task 2: Create a man page for your function.
 
-##File Descrition
+## File Descrition
 **README.md:** Contains information describing the task given by HOLBERTON SCHOOL, to it's student to develop the a printf.
 
 **man_3printf:** Manual page of the printf function with it's requirements.
