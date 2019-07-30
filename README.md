@@ -24,7 +24,7 @@
 
 **print_func.c:** Contains the function _printf this function will print a set of characters to stdout according to the directives set by Holberton for this task.
 
-##Authors##
+## Authors
 
 Daniel Baquero
 
