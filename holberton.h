@@ -23,4 +23,5 @@ int print_string(va_list valist);
 int print_decimals(va_list valist);
 int print_int(va_list valist);
 int (*get_func(char s))(va_list valist);
+int print_binary(va_list valist);
 #endif
