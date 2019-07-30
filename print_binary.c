@@ -6,9 +6,11 @@
  * Return: Count of bytes.
 **/
 
-int print_binary(va_valist valist)
+int print_binary(va_list valist)
 {
 int count, number, i, array[32];
+
+va_arg(valist, int);
 
 i = 0;
 count = 0;
