@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_binary - Prints integers to binaries. 
+ * print_binary - Prints integers to binaries.
  * @valist: List of binaries.
  * Return: Count of bytes.
 **/
@@ -18,7 +18,7 @@ if (number < 1)
 {
 _putchar(48);
 count++;
-return(count);
+return (count);
 }
 else
 {
