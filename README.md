@@ -10,7 +10,7 @@
 ## File Descrition
 **README.md:** Contains information describing the task given by HOLBERTON SCHOOL, to it's student to develop the printf.
 
-**man_3printf:** Manual page of the printf function with it's requirements.
+**man_3_printf:** Manual page of the printf function with it's requirements.
 
 **_putchar.c:** Contains the function _putchar, that writes a character c to stdout.
 
