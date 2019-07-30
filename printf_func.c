@@ -8,7 +8,7 @@
 int _printf(const char *format, ...)
 {
 va_list valist;
-int x;
+int x, count = 0;
 
 va_start(valist, format);
 
@@ -19,6 +19,7 @@ if (format[x] == '%')
 get_func(format[x + 1])(valist);
 x += 2;
 }
+count++;
 _putchar(format[x]);
 }
 va_end(valist);
