@@ -28,10 +28,11 @@ array[count] = number % 2;
 number = number / 2;
 count++;
 }
-for (i = count - 1; i >= 0; i--)
+for (i = count - 1; i > 0; i--)
 {
 _putchar(array[i] + 48);
 }
+_putchar(array[i] + 48);
 }
 return (count);
 }
