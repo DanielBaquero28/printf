@@ -8,8 +8,8 @@
 
 int print_binary(va_list valist)
 {
-int count, i, array[32], number;
-
+int count, i, array[32];
+unsigned int number;
 number = va_arg(valist, int);
 
 i = 0;
@@ -28,11 +28,12 @@ array[count] = number % 2;
 number = number / 2;
 count++;
 }
-for (i = count - 1; i > 0; i--)
+i = count - 1;
+while(i >= 0)
 {
 _putchar(array[i] + 48);
+i--;
 }
-_putchar(array[i] + 48);
 }
 return (count);
 }
