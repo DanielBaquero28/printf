@@ -8,13 +8,13 @@
 
 int print_binary(va_list valist)
 {
-int count, number, i, array[32];
+int count, i, array[32], number;
 
-va_arg(valist, int);
+number = va_arg(valist, int);
 
 i = 0;
 count = 0;
-if (number < 0)
+if (number < 1)
 {
 _putchar(48);
 count++;
