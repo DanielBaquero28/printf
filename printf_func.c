@@ -7,21 +7,37 @@
 
 int _printf(const char *format, ...)
 {
+int count = -1;
+if (format != NULL)
+{
+int x;
 va_list valist;
-int x, count = 0;
-
+int (*o)(valist);
 va_start(valist, format);
 
+if (format[0] == '%' && format[1] == '\0')
+return (-1);
+ count = 0;
 for (x = 0; format[x] != '\0'; x++)
 {
 if (format[x] == '%')
 {
-get_func(format[x + 1])(valist);
-x += 2;
+if (format[x + 1] == '%')
+{
+count = count + _putchar(format[x]);
+x++;
 }
-count++;
-_putchar(format[x]);
+else if (format[x + 1] != '\0')
+{
+o = get_func(format[x + 1]);
+count = count + (o ? o(valist) : _putchar(format[i]) + _putchar(format[i + 1]));
+x++;
+}
+}
+else
+count = count + _putchar(format[x]);
 }
 va_end(valist);
-return (0);
+}
+return (count);
 }
