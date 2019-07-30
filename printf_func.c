@@ -17,7 +17,7 @@ va_start(valist, format);
 
 if (format[0] == '%' && format[1] == '\0')
 return (-1);
- count = 0;
+count = 0;
 for (x = 0; format[x] != '\0'; x++)
 {
 if (format[x] == '%')
@@ -30,7 +30,7 @@ x++;
 else if (format[x + 1] != '\0')
 {
 o = get_func(format[x + 1]);
-count = count + (o ? o(valist) : _putchar(format[i]) + _putchar(format[i + 1]));
+count += (o ? o(valist) : _putchar(format[i]) + _putchar(format[i + 1]));
 x++;
 }
 }
