@@ -8,28 +8,29 @@
 
 int print_decimals(va_list valist)
 {
-int count = 0, n, j = 1, i;
-n = va_arg(valist, int);
-if (n < 0)
+int count = 0;
+long int num, sec_count = 1, sec_num;
+num = va_arg(valist, int);
+if (num < 0)
 {
-n = (n * -1);
+num = (num * -1);
 count = count + _putchar('-');
 }
-if (n == 0)
+if (num == 0)
 {
 _putchar(48);
 return(1);
 }
-i = n;
-while (i > 9)
+sec_num = num;
+while (sec_num > 9)
 {
-i /= 10;
-j *= 10;
+sec_num /= 10;
+sec_count *= 10;
 }
-while (j > 0)
+while (sec_count > 0)
 {
-count = count + _putchar(((n / j) % 10) + 48);
-j /= 10;
+count = count + _putchar(((num / sec_count) % 10) + 48);
+sec_count /= 10;
 }
 return (count);
 }
