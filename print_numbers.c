@@ -21,12 +21,11 @@ _putchar(48);
 return(1);
 }
 i = n;
-while (i > 0)
+while (i > 9)
 {
 i /= 10;
 j *= 10;
 }
-j /= 10;
 while (j > 0)
 {
 count = count + _putchar(((n / j) % 10) + 48);
