@@ -8,8 +8,7 @@
 
 int print_decimals(va_list valist)
 {
-int unsigned n, i, j = 1;
-int unsigned count = 0;
+unsigned int n, i, j = 1, count = 0;
 
 n = va_arg(valist, int);
 if (n < 0)
