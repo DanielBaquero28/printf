@@ -40,6 +40,9 @@ It is an argument that will not be converted it will print '%' if the notation i
 .TP
 .B b
 The unsigned int argument is converte into a binary notation.
+.TP
+.B r
+The option will convert and print a string in reverse.
 .SH BUGS
 No known bugs.
 .SH AUTHOR
