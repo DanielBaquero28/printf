@@ -29,7 +29,7 @@ number = number / 2;
 count++;
 }
 i = count - 1;
-while(i >= 0)
+while (i >= 0)
 {
 _putchar(array[i] + 48);
 i--;
