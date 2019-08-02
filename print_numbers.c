@@ -16,10 +16,10 @@ if (num < 0)
 num = (num * -1);
 count = count + _putchar('-');
 }
-if ( num == 0)
+if (num == 0)
 {
 _putchar(48);
-return(1);
+return (1);
 }
 sec_num = num;
 while (sec_num > 9)
